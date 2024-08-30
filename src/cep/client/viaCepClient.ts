@@ -6,8 +6,6 @@ export class ViaCepClient {
   public async getByCep(cep: number) {
     let response = {};
     console.info(`Buscando dados da API do ViaCEP para o cep ${cep}`);
-    // const teste = await axios.get(VIA_CEP_URI(69097-159));
-    // console.log(teste)
     await axios
       .get(VIA_CEP_URI(cep))
       .then((res) => {
